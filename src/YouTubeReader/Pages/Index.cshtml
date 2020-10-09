@@ -1,0 +1,22 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<form method="post">
+    <div>
+        <label asp-for="IdOrUrl">
+            <strong>Video ID or URL</strong>
+        </label>
+    </div>
+    
+    <div>
+        <input asp-for="IdOrUrl" type="text" autofocus autocomplete="on" placeholder="https://youtu.be/jBnWZijMbMY">
+        <span asp-validation-for="IdOrUrl"></span>
+    </div>
+    
+    <div>
+        <button type="submit">Go</button>
+    </div>
+</form>
